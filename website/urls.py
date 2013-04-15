@@ -6,7 +6,7 @@ import views
 urlpatterns = patterns('',
 
     url(r'^$', views.index, name="home"),
-    url(r'^/(?P<slug>[\w-]+)/$', views.page, name="page"),
+    url(r'^(?P<slug>[\w-]+)/$', views.page, name="page"),
     #url(r'^photo/(?P<slug>[\w-]+)/$', views.photo, name="photo"),
     #url(r'^cv/$', direct_to_template, {'template': 'cv.html'}, name="cv"),
 )

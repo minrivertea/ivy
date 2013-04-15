@@ -47,11 +47,11 @@
         <div class="span2" id="nav">
         
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a class="selected" href="home.html">HOME / 首页 <span>&#9658;</span></a></li>
-                    <li><a href="about.html">ABOUT / 关于我们 <span>&#9658;</span></a></li>
-                    <li><a href="contact.html">SERVICES / 服务 <span>&#9658;</span></a></li>
-                    <li><a href="contact.html">CASE STUDIES / 案例 <span>&#9658;</span></a></li>
-                    <li><a href="contact.html">CONTACT / 联系我们 <span>&#9658;</span></a></li>
+                    <li><a class="selected" href="/">HOME / 首页 <span>&#9658;</span></a></li>
+                    <li><a href="{% url page 'about' %}">ABOUT / 关于我们 <span>&#9658;</span></a></li>
+                    <li><a href="{% url page 'services' %}">SERVICES / 服务 <span>&#9658;</span></a></li>
+                    <li><a href="{% url page 'case-studies' %}">CASE STUDIES / 案例 <span>&#9658;</span></a></li>
+                    <li><a href="{% url page 'contact' %}">CONTACT / 联系我们 <span>&#9658;</span></a></li>
                 </ul>
         </div>
 
