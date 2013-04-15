@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Page
+from models import Page, WebsiteSettings
 
 class PageAdmin(admin.ModelAdmin):
     list_display = ('slug', 'title')
