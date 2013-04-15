@@ -11,6 +11,7 @@ class Page(models.Model):
     content = RichTextField(blank=True, null=True)
     main_navigation = models.BooleanField(default=False)
     main_navigation_position = models.IntegerField(blank=True, null=True)
+    promo_image = models.ImageField(blank=True, null=True, upload_to='promo-images')
     
     def __unicode__(self):
         return self.title
