@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
-        <title>NAME OF BUSINESS</title>
+        <title>{{ site_name }}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="{{ site_description }}" />
         <meta name="keywords" content="{{ site_keywords }}"/>
@@ -45,10 +45,10 @@
                 position:absolute;
                 top:400px;
                 left:150px;
-                background:transparent url(static/img/static/title.png) no-repeat top left;
+                background:transparent url(/static/img/static/title.png) no-repeat top left;
             }
             a.back{
-                background:transparent url(static/img/back.png) no-repeat top left;
+                background:transparent url(/static/img/back.png) no-repeat top left;
                 position:fixed;
                 width:150px;
                 height:100px;
@@ -69,40 +69,43 @@
             }
             
             
-            .home {
+            .one {
               left: 520px;
               top: 40px;   
             }
-            
-            .contact {
-                left: 325px;
-                top: 270px;
-            }
-            
-            .customers {
-               top:110px;
-               left:360px;
-            }
 
-            .case {
+            .two {
                 left: 690px;
                 top: 110px;
             }
 
-            .about {
+            .three {
+               top: 270px;
+               left: 720px;  
+            }
+            
+            .four {
                 left: 630px;
                 top: 410px;
             }
             
+            .six {
+                left: 325px;
+                top: 270px;
+            }
+            
+            .seven {
+               top:110px;
+               left:360px;
+            }
+
+
             .weibo {
                 left: 430px;
                 top: 410px;
             }
                         
-            .join {
-               top: 270px;
-               left: 720px;  
-            }
+
 
 
         </style>
@@ -113,7 +116,7 @@
         <div id="header" class="row">
             
         <div class="span10" id="title">
-            <h2>NAME OF THE COMPANY / 公司名字</h2>
+            <h2>{{ site_name }}</h2>
         </div>
         
         </div>
@@ -122,37 +125,22 @@
             <div class="title"></div>
 
             <div class="navigation" id="nav">
-                <div class="item contact">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">联系</a></h2>
-                </div>
-                <div class="item home">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">首页</a></h2>
-                </div>
-                <div class="item case">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">案例</a></h2>
-                </div>
-                <div class="item about">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">关于</a></h2>
-                </div>
                 
-                <div class="item customers">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">客户</a></h2>
+                {% for x in main_navigation %}
+                <div class="item {% cycle 'one' 'two' 'three' 'four' 'six' 'seven' %}">
+                    <a href=""><img src="/static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="{% url page x.slug %}">{{ x.title }}</a></h2>
                 </div>
+                {% endfor %}
+                
+               
                 
                 <div class="item weibo">
                     <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
                     <h2><a href="">微薄</a></h2>
                 </div>
                 
-                <div class="item join">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">加入</a></h2>
-                </div>
+                
                 
             </div>
         </div>

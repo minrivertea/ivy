@@ -47,9 +47,8 @@
         <div class="span2" id="nav">
         
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a class="selected" href="/">HOME / 首页 <span>&#9658;</span></a></li>
                     {% for page in main_navigation %}
-                    <li><a href="{% url page page.slug %}">{{ page.title }} <span>&#9658;</span></a></li>
+                    <li><a href="{% url page page.slug %}">{% if page.long_title %}{{ page.long_title }}{% else %}{{ page.title }}{% endif %}<span>&#9658;</span></a></li>
                     {% endfor %}
                 </ul>
         </div>

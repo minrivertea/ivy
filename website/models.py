@@ -7,6 +7,7 @@ from ckeditor.fields import RichTextField
 
 class Page(models.Model):
     title = models.CharField(max_length=200)
+    long_title = models.CharField(max_length=200, blank=True, null=True, help_text="Chinese and English allowed eg. ABOUT US ")
     slug = models.SlugField(max_length=80)
     content = RichTextField(blank=True, null=True)
     main_navigation = models.BooleanField(default=False)
