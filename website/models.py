@@ -19,3 +19,13 @@ class Page(models.Model):
     def get_absolute_url(self):
         return reverse('page', args=[self.slug])
 
+
+class WebsiteSettings(models.Model):
+    website_name = models.CharField(max_length=200, blank=True, null=True)
+    address = models.CharField(max_length=250, blank=True, null=True)
+    telephone = models.CharField(max_length=200, blank=True, null=True)
+    weibo_account = models.CharField(max_length=100, blank=True, null=True)
+    meta_description = models.TextField(blank=True, null=True)
+    meta_keywords = models.TextField(blank=True, null=True)
+    
+    
