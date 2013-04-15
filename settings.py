@@ -23,7 +23,6 @@ ADMINS = (('Chris West', 'chris@minrivertea.com'),)
 MANAGERS = ADMINS
 TIME_ZONE = 'Asia/Shanghai'
 SITE_ID = 1
-SITE_NAME = 'ivy-ad.com'
 SECRET_KEY = ''
 
 
@@ -53,6 +52,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.debug',
     'django.core.context_processors.request',
+    'context_processors.common',
 )
 
 
@@ -98,6 +98,8 @@ INSTALLED_APPS = (
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
+BASE_TEMPLATE = "base.html"
+SITE_NAME = 'ivy-ad.com'
 
 
 
