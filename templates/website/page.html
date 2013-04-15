@@ -1,0 +1,14 @@
+{% extends base_template %}
+
+{% block pagetitle %}{{ page.title }}{% endblock %}
+
+{% block content %}
+<div class="span6" id="photo">
+    {{ page.photo }}
+</div>
+
+<div class="span4" id="text">
+    {{ page.content|safe }}
+</div>
+
+{% endblock %}
