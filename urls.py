@@ -15,9 +15,13 @@ admin.autodiscover()
 
 # main URL patterns
 urlpatterns = patterns('',
-    (r'^', include('website.urls')),
+    
     (r'^admin/', include(admin.site.urls)),
     (r'^ckeditor/', include('ckeditor.urls')),
+    
+    (r'^', include('website.urls')),
+    
+    
     
     # SITEMAPS, FEEDS AND STATICS
     (r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'}),
