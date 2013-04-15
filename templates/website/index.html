@@ -116,7 +116,7 @@
         <div id="header" class="row">
             
         <div class="span10" id="title">
-            <h2>{{ site_name }}</h2>
+            <h2>{{ sitesettings.website_name }}</h2>
         </div>
         
         </div>
@@ -128,17 +128,18 @@
                 
                 {% for x in main_navigation %}
                 <div class="item {% cycle 'one' 'two' 'three' 'four' 'six' 'seven' %}">
-                    <a href=""><img src="/static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <a href="{% url page x.slug %}"><img src="/static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
                     <h2><a href="{% url page x.slug %}">{{ x.title }}</a></h2>
                 </div>
                 {% endfor %}
                 
                
-                
+                {% if sitesettings.weibo_account %}
                 <div class="item weibo">
-                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
-                    <h2><a href="">微薄</a></h2>
+                    <a href="http://www.weibo.com/{{ sitesettings.weibo_account }}"><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="http://www.weibo.com/{{ sitesettings.weibo_account }}">微薄</a></h2>
                 </div>
+                {% endif %}
                 
                 
                 

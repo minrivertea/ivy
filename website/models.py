@@ -30,6 +30,6 @@ class WebsiteSettings(models.Model):
     meta_keywords = models.TextField(blank=True, null=True)
     
     def __unicode__(self):
-        return self.id
+        return "%s" % self.id
     
     

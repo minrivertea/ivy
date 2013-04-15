@@ -2,17 +2,21 @@
 
 {% load thumbnail %}
 
-{% block pagetitle %}{{ page.title }}{% endblock %}
+{% block title %}{% if page.long_title %}{{ page.long_title }}{% else %}{{ page.title }}{% endif %}{% endblock %}
+{% block pagetitle %}{% if page.long_title %}{{ page.long_title }}{% else %}{{ page.title }}{% endif %}{% endblock %}
+
 
 {% block content %}
 <div class="span6" id="photo">
-    {% thumbnail page.promo_image "500" crop="" as im %}
+    {% thumbnail page.promo_image "600" crop="" as im %}
     <img src="{{ im.url }}" />
     {% endthumbnail %}
 </div>
 
+{% if page.content %}
 <div class="span4" id="text">
     {{ page.content|safe }}
 </div>
+{% endif %}
 
 {% endblock %}
