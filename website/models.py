@@ -29,4 +29,7 @@ class WebsiteSettings(models.Model):
     meta_description = models.TextField(blank=True, null=True)
     meta_keywords = models.TextField(blank=True, null=True)
     
+    def __unicode__(self):
+        return self.id
+    
     
