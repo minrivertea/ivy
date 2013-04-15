@@ -19,5 +19,5 @@ def index(request):
       
 def page(request, slug):
     page = get_object_or_404(Page, slug=slug)
-    return render(request, "page.html", locals())
+    return render(request, "website/page.html", locals())
     
