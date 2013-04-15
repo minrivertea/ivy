@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>NAME OF BUSINESS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="{{ site_description }}" />
+        <meta name="keywords" content="{{ site_keywords }}"/>
+       
+        <link rel="stylesheet" href="static/css/extra.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="static/css/bubble.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+            }
+            
+            a:link, a:visited {
+              text-decoration: none;
+              color: #333;   
+            }
+            
+            #header {
+              height: auto; 
+              margin: 0;  
+            }
+            
+            #logo {
+              position: absolute;
+              top: 150px;
+              left: 440px;   
+            }
+            
+            .container {
+              width: 1170px;
+              margin-left: auto;
+              margin-right: auto;
+              position: relative;
+            }
+            
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:400px;
+                left:150px;
+                background:transparent url(static/img/static/title.png) no-repeat top left;
+            }
+            a.back{
+                background:transparent url(static/img/back.png) no-repeat top left;
+                position:fixed;
+                width:150px;
+                height:100px;
+                outline:none;
+                bottom:0px;
+                left:0px;
+            }
+            #content{
+                margin:0 auto;
+                position: relative;
+            }
+            
+            #nav {
+              width: 100%;
+              height: 600px;
+              /*background: #aad0c5;*/
+                 
+            }
+            
+            
+            .home {
+              left: 520px;
+              top: 40px;   
+            }
+            
+            .contact {
+                left: 325px;
+                top: 270px;
+            }
+            
+            .customers {
+               top:110px;
+               left:360px;
+            }
+
+            .case {
+                left: 690px;
+                top: 110px;
+            }
+
+            .about {
+                left: 630px;
+                top: 410px;
+            }
+            
+            .weibo {
+                left: 430px;
+                top: 410px;
+            }
+                        
+            .join {
+               top: 270px;
+               left: 720px;  
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <div id="header" class="row">
+            
+        <div class="span10" id="title">
+            <h2>NAME OF THE COMPANY / 公司名字</h2>
+        </div>
+        
+        </div>
+        <div id="content">
+            <img id="logo" src="static/img/logo_large.png"/>
+            <div class="title"></div>
+
+            <div class="navigation" id="nav">
+                <div class="item contact">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">联系</a></h2>
+                </div>
+                <div class="item home">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">首页</a></h2>
+                </div>
+                <div class="item case">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">案例</a></h2>
+                </div>
+                <div class="item about">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">关于</a></h2>
+                </div>
+                
+                <div class="item customers">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">客户</a></h2>
+                </div>
+                
+                <div class="item weibo">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">微薄</a></h2>
+                </div>
+                
+                <div class="item join">
+                    <a href=""><img src="static/img/bg_shop.png" alt="" width="199" height="199" class="circle"/></a>
+                    <h2><a href="">加入</a></h2>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('h2').stop().animate({
+                        'font-size': '60px',
+                        'width':'150px',
+                        'top': '45px',
+                    },500,'easeOutBack');
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('h2').stop().animate({
+                        'font-size': '40px',
+                        'width': '130px',
+                        'top': '35px',
+                    },3000,'easeOutBack');
+                    $this.find('img').stop().animate({
+                        'width'     :'130px',
+                        'height'    :'130px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },3000,'easeOutBack');
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+    </body>
+</html>

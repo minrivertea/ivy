@@ -1,0 +1,96 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "STKaiti",华文楷体,sans-serif;   
+  font-weight: 300;
+  background: url('../img/back3.png') repeat top left #f9f9f9;
+}
+
+a img:hover {
+  opacity: 0.8;   
+}
+
+#header {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+#header #title {
+  height: 130px;
+  border-bottom: 1px solid #f1f1f1; 
+}
+
+#header #title h2 {
+  font-size: 18px;
+  position: relative;
+  top: 75px;
+  border-bottom: 5px solid #f1f1f1;
+  padding: 0px 35px;
+  width: auto;
+  float: left;
+  font-weight: 300;   
+}
+
+#header #logo img {
+  float: right;   
+}
+
+.nav li a {
+  text-align: right;   
+}
+
+.nav li a.selected {
+  color: #333; 
+  position: relative;  
+}
+
+.nav li a span {
+    color: #000000;
+    display: none;
+    font-size: 16px;
+    position: absolute;
+    right: -12px;
+    top: 9px;
+}
+
+.nav li a.selected span {
+  display: block;   
+}
+
+#text {
+  max-height: 400px;
+  overflow: scroll;
+    
+}
+
+#text p {
+  line-height: 3em; 
+  font-size: 14px;
+  padding: 0 30px;   
+}
+
+#text h2 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #000;
+  width: 100%;
+  text-align: center;   
+}
+
+#text.turqoise {
+  background: #aad0c5;   
+}
+
+#footer {
+  margin-top: 70px;   
+}
+
+#footer p {
+  color: #777;   
+}
+
+#loading {
+   position: absolute;
+   left: 50%;
+   top: 50%;   
+}
+
+518878
