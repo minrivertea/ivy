@@ -136,7 +136,7 @@ LANGUAGES = (
 
 LANGUAGE_CODE = 'zh'
 
-LOG_FILENAME = ""
+LOG_FILENAME = "/var/log/django/ivy.log"
 
 try:
     from local_settings import *
