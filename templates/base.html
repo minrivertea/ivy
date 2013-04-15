@@ -48,10 +48,9 @@
         
                 <ul class="nav nav-pills nav-stacked">
                     <li><a class="selected" href="/">HOME / 首页 <span>&#9658;</span></a></li>
-                    <li><a href="{% url page 'about' %}">ABOUT / 关于我们 <span>&#9658;</span></a></li>
-                    <li><a href="{% url page 'services' %}">SERVICES / 服务 <span>&#9658;</span></a></li>
-                    <li><a href="{% url page 'case-studies' %}">CASE STUDIES / 案例 <span>&#9658;</span></a></li>
-                    <li><a href="{% url page 'contact' %}">CONTACT / 联系我们 <span>&#9658;</span></a></li>
+                    {% for page in navigation %}
+                    <li><a href="{% url page page.slug %}">{{ page.title }} <span>&#9658;</span></a></li>
+                    {% endfor %}
                 </ul>
         </div>
 
