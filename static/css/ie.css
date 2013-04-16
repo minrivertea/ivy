@@ -122,3 +122,7 @@ ul.thumbnails {margin-left:-20px;float:none;display:inline-block;zoom:1;clear:bo
 .container {
   margin: 0 auto;   
 }
+
+#header {
+  margin-top: 20px;   
+}
