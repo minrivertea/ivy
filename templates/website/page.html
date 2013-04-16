@@ -9,7 +9,7 @@
 {% block content %}
 <div class="span6" id="photo">
     {% thumbnail page.promo_image "570" crop="" as im %}
-    <img src="{{ im.url }}" />
+    <img class="span6" src="{{ im.url }}" />
     {% endthumbnail %}
 </div>
 
