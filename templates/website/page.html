@@ -7,11 +7,13 @@
 
 
 {% block content %}
-<div class="span6" id="photo">
-    {% thumbnail page.promo_image "570" crop="" as im %}
-    <img class="span6" src="{{ im.url }}" />
-    {% endthumbnail %}
-</div>
+    {% if page.promo_image %}
+        {% thumbnail page.promo_image "570" crop="" as im %}
+        <img class="span6" src="{{ im.url }}" />
+        {% endthumbnail %}
+    {% else %}
+        <div id="photo" class="span6"></div>
+    {% endif %}
 
 {% if page.content %}
 <div class="span4" id="text">
