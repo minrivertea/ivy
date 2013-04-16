@@ -2,7 +2,7 @@ body {background:#ffffff;background-image:none; padding:0}
                
 /* Original hacks by Jonathon Joyce (edited) */
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-    width: 960px;
+    width: 1170px;
 }
 .row {margin:0;margin-left:20px;}
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12  {float:left;display:inline; margin-left: 20px}
